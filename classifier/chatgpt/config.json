@@ -1,0 +1,21 @@
+{
+  "classifiers": [
+    {
+      "classifier": "gpt-4o-mini",
+      "problem_type": "single_label_classification"
+    },
+    {
+      "classifier": "gpt-4",
+      "problem_type": "single_label_classification"
+    }
+  ],
+  "tests": [
+    "cve_fixes"
+  ],
+  "languages": [
+    "java"
+  ],
+  "targets": [
+    20
+  ]
+}

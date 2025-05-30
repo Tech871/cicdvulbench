@@ -1,0 +1,112 @@
+cwe-798
+hardcoded credential
+hardcoded creds
+hardcoded password
+hardcoded authentication token
+hardcoded auth token
+hardcoded token
+hardcoded access token
+hardcoded secret
+hardcoded key
+hardcoded pkey
+hardcoded priv key
+hardcoded private key
+hardcoded api key
+hard-coded credential
+hard-coded creds
+hard-coded password
+hard-coded authentication token
+hard-coded auth token
+hard-coded token
+hard-coded access token
+hard-coded secret
+hard-coded key
+hard-coded pkey
+hard-coded priv key
+hard-coded private key
+hard-coded api key
+static credential
+static creds
+static password
+static authentication token
+static auth token
+static token
+static access token
+static secret
+static pkey
+static priv key
+static private key
+static api key
+embedded credential
+embedded creds
+embedded password
+embedded authentication token
+embedded auth token
+embedded token
+embedded access token
+embedded secret
+embedded key
+embedded pkey
+embedded priv key
+embedded private key
+embedded api key
+insecurely stored credential
+insecurely stored creds
+insecurely stored password
+insecurely stored authentication token
+insecurely stored auth token
+insecurely stored token
+insecurely stored access token
+insecurely stored secret
+insecurely stored key
+insecurely stored pkey
+insecurely stored priv key
+insecurely stored private key
+insecurely stored api key
+plaintext credential
+plaintext creds
+plaintext password
+plaintext authentication token
+plaintext auth token
+plaintext token
+plaintext access token
+plaintext secret
+plaintext key
+plaintext pkey
+plaintext priv key
+plaintext private key
+plaintext api key
+exposed credential
+exposed creds
+exposed password
+exposed authentication token
+exposed auth token
+exposed token
+exposed access token
+exposed secret
+exposed key
+exposed pkey
+exposed priv key
+exposed private key
+exposed api key
+cve-2014-125030
+cve-2016-10928
+cve-2016-6829
+cve-2017-14143
+cve-2019-14837
+cve-2019-15075
+cve-2020-5222
+cve-2020-5248
+cve-2022-21669
+cve-2022-22845
+cve-2022-23650
+cve-2022-29186
+cve-2023-1269
+cve-2023-2138
+cve-2023-22463
+cve-2023-27583
+cve-2023-32077
+cve-2023-41878
+cve-2023-5318
+cve-2024-23685
+cve-2024-23687

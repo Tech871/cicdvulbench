@@ -1,0 +1,20 @@
+{
+  "classifiers": [
+    {
+      "classifier": "semgrep",
+      "problem_type": "single_label_classification"
+    }
+  ],
+  "tests": [
+    "cve_fixes"
+  ],
+  "languages": [
+    "java"
+  ],
+  "targets": [
+    [
+      20,
+      502
+    ]
+  ]
+}

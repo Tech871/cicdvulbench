@@ -1,0 +1,45 @@
+{
+  "languages": [
+    "java"
+  ],
+  "targets": [
+    [
+      20,
+      22,
+      78,
+      89,
+      94,
+      269,
+      306,
+      352,
+      400,
+      416,
+      434,
+      502,
+      787,
+      798,
+      918
+    ]
+  ],
+  "tests": [
+    "osv_dev_depth_0"
+  ],
+  "models": [
+    {
+      "classifier": "qwen2.5-coder-1.5b",
+      "train": "qwen_classified_depth_0"
+    },
+    {
+      "classifier": "qwen2.5-coder-7b",
+      "train": "qwen_classified_depth_0"
+    },
+    {
+      "classifier": "qwen2.5-coder-32b",
+      "train": "qwen_classified_depth_0"
+    },
+    {
+      "classifier": "tf_idf",
+      "train": "qwen_classified_depth_0"
+    }
+  ]
+}

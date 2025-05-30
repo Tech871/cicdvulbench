@@ -1,0 +1,13 @@
+cwe-416
+cwe-672
+cwe-666
+use after free
+socket after close
+file after close
+connection after close
+cve-2018-25098
+cve-2019-15691
+cve-2019-19480
+cve-2020-15270
+cve-2024-23332
+cve-2024-25619

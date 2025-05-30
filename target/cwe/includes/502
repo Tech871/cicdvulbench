@@ -1,0 +1,110 @@
+cwe-502
+deserialization of untrusted data
+unmarshalling of untrusted data
+unsafe data deserialization
+deserialization of malicious input
+dangerous deserialization
+compromised data deserialization
+exploitable deserialization 
+deserialization of tainted data
+unsafe binary data parsing
+unsafe data parsing
+unsafe parsing
+injection-prone deserialization
+deserialization of attacker-controlled data
+insecure binary stream decoding
+weak validation of serialized input
+unsafe deserialization
+dangerous serialized payload
+cve-2012-4406
+cve-2013-4521
+cve-2017-0903
+cve-2017-1000248
+cve-2017-14141
+cve-2017-20189
+cve-2017-2608
+cve-2018-1000074
+cve-2018-12022
+cve-2018-12023
+cve-2018-14718
+cve-2018-14719
+cve-2018-14720
+cve-2018-15503
+cve-2018-17057
+cve-2018-19360
+cve-2018-19361
+cve-2018-19362
+cve-2018-21234
+cve-2018-6331
+cve-2018-7889
+cve-2019-10867
+cve-2019-10912
+cve-2019-11458
+cve-2019-12868
+cve-2019-14439
+cve-2019-16317
+cve-2019-16774
+cve-2019-17358
+cve-2020-10650
+cve-2020-15148
+cve-2020-15172
+cve-2020-15244
+cve-2020-24750
+cve-2020-26207
+cve-2020-28032
+cve-2020-36326
+cve-2020-4043
+cve-2020-7660
+cve-2021-21242
+cve-2021-21243
+cve-2021-21249
+cve-2021-21371
+cve-2021-23592
+cve-2021-23758
+cve-2021-27213
+cve-2021-29505
+cve-2021-32568
+cve-2021-32634
+cve-2021-33420
+cve-2021-33806
+cve-2021-37678
+cve-2021-39132
+cve-2021-39207
+cve-2021-41110
+cve-2021-4118
+cve-2021-43853
+cve-2022-1032
+cve-2022-21647
+cve-2022-23535
+cve-2022-27158
+cve-2022-29528
+cve-2022-3525
+cve-2022-36038
+cve-2022-39297
+cve-2022-39298
+cve-2022-39311
+cve-2022-39379
+cve-2022-41922
+cve-2022-41958
+cve-2022-42003
+cve-2022-42004
+cve-2022-4890
+cve-2023-23930
+cve-2023-25558
+cve-2023-26153
+cve-2023-28115
+cve-2023-29006
+cve-2023-36480
+cve-2023-38689
+cve-2023-41330
+cve-2023-42809
+cve-2023-44392
+cve-2023-47130
+cve-2023-47248
+cve-2023-49297
+cve-2023-50252
+cve-2023-51700
+cve-2023-6730
+cve-2023-7018
+cve-2024-23636
+cve-2024-3568

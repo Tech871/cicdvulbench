@@ -1,0 +1,90 @@
+cwe-269
+improper privilege management
+improper privilege
+broken privilege
+improper access
+broken access
+privilege chaining
+privilege escalation
+insecure privilege assignment
+misconfigured access rights
+improper privilege assignment
+fix(access-control)
+restrict excessive user privileges
+misconfigured user privileges
+ensured that only authorized
+strengthen privilege
+patch privilege
+fix access
+fix(access)
+restrict access
+harden privilege
+enforce strict privilege
+patch privilege
+close privilege escalation
+cve-2013-2012
+cve-2013-2016
+cve-2013-4251
+cve-2013-7421
+cve-2014-0185
+cve-2014-3534
+cve-2014-4943
+cve-2014-5206
+cve-2014-5207
+cve-2014-9322
+cve-2014-9644
+cve-2015-0239
+cve-2015-8032
+cve-2015-8539
+cve-2017-15052
+cve-2017-15053
+cve-2017-15055
+cve-2017-5207
+cve-2017-6954
+cve-2018-13405
+cve-2019-12794
+cve-2019-13272
+cve-2019-15901
+cve-2019-16202
+cve-2020-14976
+cve-2020-15248
+cve-2020-15862
+cve-2020-27519
+cve-2020-35517
+cve-2020-36542
+cve-2020-5253
+cve-2020-5291
+cve-2021-3020
+cve-2021-39167
+cve-2021-39168
+cve-2021-43835
+cve-2022-0144
+cve-2022-1397
+cve-2022-1770
+cve-2022-2023
+cve-2022-24750
+cve-2022-25372
+cve-2022-3068
+cve-2022-3422
+cve-2022-39202
+cve-2022-39395
+cve-2022-4314
+cve-2022-4687
+cve-2022-48365
+cve-2023-1326
+cve-2023-1762
+cve-2023-2240
+cve-2023-26475
+cve-2023-28436
+cve-2023-28855
+cve-2023-32696
+cve-2023-34465
+cve-2023-37907
+cve-2023-39520
+cve-2023-41036
+cve-2023-43663
+cve-2023-43664
+cve-2023-4697
+cve-2023-51386
+cve-2024-0439
+cve-2024-24747

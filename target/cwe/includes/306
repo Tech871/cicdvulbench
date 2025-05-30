@@ -1,0 +1,213 @@
+cwe-306
+missing authentication
+missing auth
+broken auth
+anyone can access
+authenticanion bypass
+lack of auth
+authentication not enforced
+auth not enforced
+unauthenticated access
+open access vulnerability
+no identity validation
+unrestricted system entry
+insecure access control
+authentication bypass
+failure to enforce auth
+unprotected resource access
+unsecured endpoint exposure
+no credential verification
+publicly accessible without authentication
+missing identity validation
+fix auth
+fix(auth)
+prevent unauthorized access
+restrict access to authenticated
+authentication was missing
+auth was missing
+harden auth
+enforce auth
+strengthen auth
+authencitation compromized
+authencitation compromised
+auth compromized
+auth compromised
+improper auth
+invalid auth
+auth problem
+authn bug
+authc bug
+authentication bug
+authentication problem
+fallo en la autenticación
+autenticación comprometida
+autenticación vulnerable
+autenticación defectuosa
+ccve-2008-1897
+cve-2012-1123
+cve-2012-2983
+cve-2012-3408
+cve-2012-3520
+cve-2012-4456
+cve-2012-4457
+cve-2013-7137
+cve-2014-0121
+cve-2014-125060
+cve-2014-2062
+cve-2014-2066
+cve-2014-3999
+cve-2014-4668
+cve-2014-9753
+cve-2015-10083
+cve-2015-6817
+cve-2016-4484
+cve-2016-7144
+cve-2016-7145
+cve-2016-9124
+cve-2017-10807
+cve-2017-14032
+cve-2017-14337
+cve-2017-14623
+cve-2017-16025
+cve-2017-16613
+cve-2017-2604
+cve-2017-6199
+cve-2017-6413
+cve-2018-10861
+cve-2018-1129
+cve-2018-14345
+cve-2018-20954
+cve-2018-7749
+cve-2018-7750
+cve-2019-1020018
+cve-2019-10911
+cve-2019-12105
+cve-2019-12395
+cve-2019-12530
+cve-2019-18848
+cve-2019-20786
+cve-2019-20933
+cve-2020-11020
+cve-2020-13405
+cve-2020-16088
+cve-2020-26214
+cve-2020-26236
+cve-2020-27985
+cve-2020-28874
+cve-2020-28896
+cve-2020-36569
+cve-2020-4074
+cve-2020-5206
+cve-2020-5268
+cve-2020-7964
+cve-2021-21308
+cve-2021-21329
+cve-2021-21335
+cve-2021-21378
+cve-2021-21403
+cve-2021-23365
+cve-2021-31245
+cve-2021-31606
+cve-2021-32637
+cve-2021-32659
+cve-2021-32691
+cve-2021-32693
+cve-2021-32700
+cve-2021-3632
+cve-2021-3827
+cve-2021-3850
+cve-2021-39165
+cve-2021-39177
+cve-2021-3979
+cve-2021-40506
+cve-2021-40507
+cve-2021-41129
+cve-2021-41157
+cve-2021-41265
+cve-2021-41317
+cve-2021-43786
+cve-2021-45379
+cve-2021-45890
+cve-2022-1681
+cve-2022-21684
+cve-2022-23126
+cve-2022-23220
+cve-2022-23652
+cve-2022-24738
+cve-2022-24813
+cve-2022-24829
+cve-2022-24857
+cve-2022-24976
+cve-2022-2553
+cve-2022-29237
+cve-2022-29534
+cve-2022-29858
+cve-2022-31022
+cve-2022-3152
+cve-2022-3173
+cve-2022-3327
+cve-2022-36073
+cve-2022-36092
+cve-2022-36093
+cve-2022-36106
+cve-2022-36436
+cve-2022-37298
+cve-2022-39205
+cve-2022-39246
+cve-2022-39248
+cve-2022-39249
+cve-2022-39250
+cve-2022-39251
+cve-2022-39252
+cve-2022-39255
+cve-2022-39257
+cve-2022-39263
+cve-2022-39264
+cve-2022-39355
+cve-2022-39387
+cve-2022-4018
+cve-2022-41912
+cve-2022-44216
+cve-2022-46146
+cve-2022-46170
+cve-2022-4722
+cve-2023-0311
+cve-2023-1065
+cve-2023-25570
+cve-2023-26150
+cve-2023-27582
+cve-2023-28609
+cve-2023-3069
+cve-2023-30845
+cve-2023-31123
+cve-2023-31143
+cve-2023-32081
+cve-2023-34094
+cve-2023-37265
+cve-2023-37266
+cve-2023-37268
+cve-2023-37471
+cve-2023-37918
+cve-2023-38691
+cve-2023-39349
+cve-2023-40020
+cve-2023-40170
+cve-2023-40585
+cve-2023-43793
+cve-2023-43805
+cve-2023-43809
+cve-2023-45669
+cve-2023-46249
+cve-2023-47127
+cve-2023-4815
+cve-2023-48228
+cve-2023-48312
+cve-2023-50263
+cve-2023-50714
+cve-2023-5844
+cve-2024-21632
+cve-2024-21638
+cve-2024-21654
+cve-2024-2213
+cve-2024-23637
+cve-2024-25618ve-2024-22212

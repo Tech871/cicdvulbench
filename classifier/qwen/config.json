@@ -1,0 +1,23 @@
+{
+  "classifiers": [
+    {
+      "pretrained_model_path": "Qwen/Qwen3-0.6B",
+      "problem_type": "single_label_classification"
+    }
+  ],
+  "trains": [
+    "qwen_classified_depth_0"
+  ],
+  "tests": [
+    "osv_dev_depth_0"
+  ],
+  "languages": [
+    "java"
+  ],
+  "targets": [
+    [
+      20,
+      502
+    ]
+  ]
+}

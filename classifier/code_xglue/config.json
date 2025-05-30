@@ -1,0 +1,25 @@
+{
+  "classifiers": [
+    {
+      "classifier": "bert",
+      "pretrained_model_path": "bert-base-uncased",
+      "problem_type": "single_label_classification",
+      "dropout_probability": 0.1
+    }
+  ],
+  "trains": [
+    "qwen_classified_depth_0"
+  ],
+  "tests": [
+    "osv_dev_depth_0"
+  ],
+  "languages": [
+    "java"
+  ],
+  "targets": [
+    [
+      20,
+      502
+    ]
+  ]
+}
