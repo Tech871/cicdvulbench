@@ -1,20 +1,19 @@
-## Как установить
 
-Получаем токен https://huggingface.co/settings/tokens.
-Для `meta-llama/Llama-3.1-8B` нужно выбрать `Read access to contents of all public gated repos you can access`
-при создании ключа.
+## How to Install
 
-Создаем `.env` в корне проекта и добавляем туда этот токен `HUGGINGFACE_TOKEN`.
-Если хотим использовать `S3`, то добавляем токены `AWS_ACCESS_KEY_ID` и `AWS_SECRET_ACCESS_KEY`.
+Get a token at [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens).
+For `meta-llama/Llama-3.1-8B`, you need to select `Read access to contents of all public gated repos you can access` when creating the key.
 
-Для
-запуска [Flash Attention на NVIDIA](https://huggingface.co/docs/transformers/perf_infer_gpu_one?install=NVIDIA#flashattention)
+Create a `.env` file in the root of the project and add this token as `HUGGINGFACE_TOKEN`.
+If you want to use `S3`, also add the tokens `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`.
+
+To run [Flash Attention on NVIDIA](https://huggingface.co/docs/transformers/perf_infer_gpu_one?install=NVIDIA#flashattention):
 
 ```bash
 pip install flash-attn --no-build-isolation
 ```
 
-Правим конфиг `config.json` с описанием того, какие модели, на чем обучать и тестировать
+Edit the `config.json` file to describe which models to train and test, and on what data.
 
 ```json
 {
@@ -48,104 +47,105 @@ pip install flash-attn --no-build-isolation
 }
 ```
 
-Подробнее про версии `Qwen` можно посмотреть здесь https://huggingface.co/Qwen.
-Также подойдут `Llama` модели,
-такие как `nvidia/Llama-3.1-Nemotron-Nano-8B-v1` или `meta-llama/Llama-3.1-8B`.
+More information about `Qwen` versions can be found here: [https://huggingface.co/Qwen](https://huggingface.co/Qwen).
+Llama models are also suitable, such as `nvidia/Llama-3.1-Nemotron-Nano-8B-v1` or `meta-llama/Llama-3.1-8B`.
 
-Если `num_labels = 2`, то будет применена бинарная классификация - есть уязвимость или ее нет. В остальных случаях
-параметр `num_labels` вообще не нужно указывать,
-тогда количество классов будет равно количеству таргетов + 1.
+If `num_labels = 2`, binary classification will be applied—whether there is a vulnerability or not. In other cases, you do not need to specify the `num_labels` parameter; then, the number of classes will equal the number of targets + 1.
 
-Дополнительно можно указать `problem_type`.
-Если у каждого примера ровно одна метка, то `single_label_classification`.
-Если меток может быть несколько, то `multi_label_classification`.
-По умолчанию используется `single_label_classification`.
+Additionally, you can specify `problem_type`.
+If each sample has exactly one label, use `single_label_classification`.
+If there can be several labels, use `multi_label_classification`.
+By default, `single_label_classification` is used.
 
-Чтобы обучение было мультиклассовым,
-достаточно в `targets` указать список номеров `CWE`.
+To make training multiclass, just specify a list of `CWE` numbers in `targets`.
 
+## How to Run on the Server
 
-## Как запустить на сервере
-
-Убеждаемся, что никто ничего не запускает сейчас
+Make sure no one else is running anything at the moment:
 
 ```bash
 nvtop
 ```
 
-Запускаем обучение
+Start training:
 
 ```bash
 accelerate launch train.py
 ```
 
-См. [Fully Sharded Data Parallel](https://github.com/huggingface/accelerate/blob/main/docs/source/usage_guides/fsdp.md)
+See [Fully Sharded Data Parallel](https://github.com/huggingface/accelerate/blob/main/docs/source/usage_guides/fsdp.md)
 
-Запускаем тест
+Start testing:
 
 ```bash
 python3 test.py
 ```
 
-## Как запустить через docker
+## How to Run with Docker
 
-Собираем или пересобираем образ из корня проекта
+Build or rebuild the image from the root of the project:
+
 ```bash
-docker build -t имя_образа .
+docker build -t image_name .
 ```
 
-Запускаем его с параметрами, переданными через `.env` 
-или явно при запуске докера, например, `-e MODEL_PATH=Qwen/Qwen3-0.6B`, 
-также можно указать `DEPTH`, `TRAIN` и `TEST`
+Run it with parameters passed via `.env` or explicitly when starting the container, for example, `-e MODEL_PATH=Qwen/Qwen3-0.6B`.
+You can also specify `DEPTH`, `TRAIN`, and `TEST`.
 
-Для обучения
-```bash
-docker run --gpus all -it -e RUN=train имя_образа
-```
-Если хотим продолжить обучение с чекпоинта, то нужно передать его номер, 
-например, `-e CHECKPOINT=64`
+For training:
 
-Для тестирования
 ```bash
-docker run --gpus all -it -e RUN=test имя_образа
+docker run --gpus all -it -e RUN=train image_name
 ```
 
-Для обучения и теста без сохранения на `S3`
+If you want to resume training from a checkpoint, pass its number, e.g., `-e CHECKPOINT=64`
+
+For testing:
+
 ```bash
-docker run --gpus all -it имя_образа
+docker run --gpus all -it -e RUN=test image_name
 ```
 
-Дополнительно см. `docker-run.sh` в корне проекта.
+For training and testing without saving to `S3`:
 
-Удаляем образ, если больше не нужен
 ```bash
-docker rmi -f имя_образа
+docker run --gpus all -it image_name
 ```
 
-## Как отлаживать
+Additionally, see `docker-run.sh` in the root of the project.
 
-Запускаем `TensorBoard` и пробрасываем порт к себе через `SSH` туннель
+Delete the image if you no longer need it:
 
 ```bash
-tensorboard --logdir ~/experiment/log/язык/таргет/трейн/классификатор
-ssh -L порт:localhost:порт юзернейм@212.41.1.249
+docker rmi -f image_name
 ```
 
-Либо качаем логи через `scp` и запускаемся у себя
+## How to Debug
+
+Start `TensorBoard` and forward the port to yourself via an `SSH` tunnel:
 
 ```bash
-scp -r юзернейм@212.41.1.249:~/experiment/log/язык/таргет/трейн/классификатор log
+tensorboard --logdir ~/experiment/log/language/target/train/classifier
+ssh -L port:localhost:port username@212.41.1.249
+```
+
+Or download the logs via `scp` and run locally:
+
+```bash
+scp -r username@212.41.1.249:~/experiment/log/language/target/train/classifier log
 tensorboard --logdir log
 ```
 
-## Как подбирать гиперпараметры
+## How to Select Hyperparameters
 
-Меняем в `TrainingArguments` параметры, которые хотим подобрать, 
-например, `learning_rate=trial.suggest_float('learning_rate', 1e-5, 1e-2)`.
+Change in `TrainingArguments` the parameters you want to tune,
+for example, `learning_rate=trial.suggest_float('learning_rate', 1e-5, 1e-2)`.
 
-Меняем количество попыток `n_trials` в `study.optimize` функции,
-например, `study.optimize(objective, n_trials=100)`.
+Change the number of attempts `n_trials` in the `study.optimize` function,
+for example, `study.optimize(objective, n_trials=100)`.
 
 ```bash
-accelerate launch stady.py
+accelerate launch study.py
 ```
+
+
