@@ -1,4 +1,4 @@
-## Как запускать
+## How to run
 
 ```bash
 ollama pull deepseek-r1:14b
