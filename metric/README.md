@@ -1,13 +1,16 @@
-### Оценка качества и визуализация результатов
 
-Анализ предсказаний обученных классификаторов. 
-Сравнивая предсказания, можно оценить качество моделей. 
+### Evaluation and Visualization of Results
 
-Реализованы основные метрики качества:
-- достоверность (accuracy)
-- F1-мера
-- информированность
-- маркированность
-- MCC
-- precision-recall 
-- receiver operating characteristic (ROC)
+Analysis of predictions made by trained classifiers.
+By comparing predictions, you can assess the quality of the models.
+
+The main quality metrics implemented are:
+
+* Accuracy
+* F1 score
+* Informedness
+* Markedness
+* MCC
+* Precision-Recall
+* Receiver Operating Characteristic (ROC)
+
