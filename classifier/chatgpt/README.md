@@ -1,7 +1,9 @@
-## Как запускать
 
-Получаем токен на https://console.proxyapi.ru/keys
+## How to Run
 
-Создаем `.env` в корне проекта и добавляем туда этот токен `OPENAI_API_KEY=x`
+Get a token at [https://console.proxyapi.ru/keys](https://console.proxyapi.ru/keys)
 
-Правим конфиг `config.json` с описанием того, какие модели, на чем обучать и тестировать
+Create a `.env` file in the root of the project and add this token there: `OPENAI_API_KEY=x`
+
+Edit the `config.json` file to describe which models to train and test, and on what data.
+
