@@ -31,38 +31,7 @@ CICD-Vul addresses a critical gap in vulnerability detection research by providi
 - **1,179 Java commits** spanning 15 CWE types
 - **1,808 revisions** from 528 repositories
 - **CVE-based ground truth** from OSV dataset
-- **Balanced distribution** across vulnerability types
 
-
-## 🚀 Installation
-
-
-
-### Setup
-
-```bash
-ADD SCRIPT
-
-```
-
-## ⚡ Quick Start
-
-### Evaluation
-
-```python
-ADD SCRIPT
-
-```
-
-### Run Full Benchmark
-
-```bash
-# Evaluate all models across all depths
-python scripts/run_benchmark.py --config configs/full_evaluation.yaml
-
-# Generate results table
-python scripts/generate_results.py --output results/table6.csv
-```
 
 ## 🧪 Experimental Setup
 
@@ -88,40 +57,55 @@ python scripts/generate_results.py --output results/table6.csv
 - **Recall**: True Positives / (True Positives + False Negatives)
 - **MCC**: Matthews Correlation Coefficient (primary metric)
 
-## 📈 Results
 
-### Best Model Performance (Table 6)
-
-| Model | Depth | Precision | Recall | MCC |
-|-------|-------|-----------|---------|-----|
-| tf-idf | 1 | **1.000** | 0.073 | **0.057** |
-| Qwen2.5-Coder-32b | 2 | 1.000 | 0.050 | 0.047 |
-| Qwen2.5-Coder-32b | 3 | 1.000 | 0.063 | 0.030 |
-
-
-## 🔄 Reproducibility
-
-All experiments are fully reproducible:
-
-```bash
-
-```
 
 ## Launch instructions
 
-Create .env file with following content:
+### Qwen models
+
+1. Unpack data.tar.gz either to local file system or to S3 bucket.
+In the latter case, ensure that `src` is a top-level directory.
+
+2. Create .env file with following content:
 
 ```
-AWS_ACCESS_KEY_ID=
-AWS_SECRET_ACCESS_KEY=
-HUGGINGFACE_TOKEN=
-BUCKET=
-CLASSIFIER=
-MODEL_PATH=
-DEPTH=
+AWS_ACCESS_KEY_ID=<key id>
+AWS_SECRET_ACCESS_KEY=<key>
+HUGGINGFACE_TOKEN=<token>
+CLASSIFIER=<folder name to save checkpoints and data>
+MODEL_PATH=<path of the model in Hugginface>
+BUCKET=<S3 bucket to work with; do not set if you want to run locally>
+export S3_ENDPOINT=<S3 service endpoint if we want to keep data and checkpoints on S3, don't set otherwise>
 ```
 
-where `BUCKET` is a name of AWS bucket to use for input / output data,
-`MODEL_PATH` is a path of a model on Huggingface,
-make a Docker image and run the container.
+if you want to run evaluation with prepared checkpoints, add
+```
+RUN=test
+```
+
+If you want to obtain checkpoints, but run no tests, add
+
+If you want to evaluate pre-trained models, add
+```
+RUN=test
+export PRETRAINED=1
+```
+
+If you run scripts w/o S3, add
+```
+export ROOT_DIR=<directory where src from data.tar.gz is>
+```
+
+3. Build a Docker image and execute
+```
+for d in 0 1 2 3 5; do docker run --gpus all -it -e DEPTH=$d 7bbd48ab94cc; done
+```
+
+### Tf-idf classifier and misc models
+
+Unpack data.tar.gz. Either export `ROOT_DIR` as specified above or
+move `src` to working directory.
+
+Follow instructions from classifier/<name>/README.md then.
+
 
