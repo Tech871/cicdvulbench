@@ -1,40 +1,31 @@
-Сборка датасета из гитхаба.
 
-## Что происходит
+Building a Dataset from GitHub
 
-`repos.py` качаем репозитории по году, языку и лицензии
+## What Happens
 
-`pulls.py` извлекаем из них пулы
+* `repos.py`: Downloads repositories by year, language, and license
+* `pulls.py`: Extracts pull requests from them
+* `targets.py`: Determines vulnerability based on pull request descriptions
+* `commits.py`: Retrieves commits for pull requests that fix vulnerabilities
+* `files.py`: Gets the file with the vulnerability before and after the change
+* `rows.py`: For each language and vulnerability, generates a training dataset
 
-`targets.py` по описанию пула определяем уязвимость
+## How to Run
 
-`commits.py` получаем коммиты для пулов с исправлением уязвимости
+Get a GitHub API token at [https://github.com/settings/tokens](https://github.com/settings/tokens) with read permissions.
 
-`files.py` берем файл с уязвимостью до и после изменения
-
-`rows.py` для каждого языка и уязвимости получаем обучающую выборку
-
-## Как запускать
-
-Получаем токен github api https://github.com/settings/tokens с правами на чтение.
-
-Заводим в корне проекта `.env` файл с перечислением токенов через запятую без пробелов:
+Create a `.env` file in the root of the project listing tokens separated by commas with no spaces:
 
 `GITHUB_TOKENS=x,y,z`
 
-## Куда смотреть
+## Where to Look
 
-Промежуточные результаты можно увидеть в папке `tmp/язык/год/лицензия`:
+Intermediate results can be found in the folder `tmp/language/year/license`:
 
-`progress.txt` - прогресс выполнения
+* `progress.txt` — execution progress
+* `repos.json` — found repositories
+* `pulls.json` — collected closed pull requests
+* `targets.json` — vulnerabilities identified from pull request descriptions
+* `commits.json` — pull request commits with vulnerability fixes
+* `files.json` — files before and after with the proposed vulnerability fix
 
-`repos.json` - найденные репозитории
-
-`pulls.json` - собранные закрытые пул реквесты
-
-`targets.json` - вычисленные уязвимости по описанию пул реквестов
-
-`commits.json` - коммиты пул реквестов с исправлением уязвимостей
-
-`files.json` - файлы до и после с предполагаемым исправлением уязвимости
- 
