@@ -1,5 +1,7 @@
-### Обучение и тестирование классификаторов
 
-Обучение и дообучение языковых моделей и классификаторов. 
-Одним из реализованных классификаторов является градиентный бустинг на `TF-IDF` признаках, который нужен для оценки сложности бенчмарка.
-Здесь также реализовано тестирование классификаторов и сохранение их предсказаний для дальнейшего анализа.
+### Training and Testing Classifiers
+
+Training and fine-tuning language models and classifiers.
+One of the implemented classifiers is gradient boosting on `TF-IDF` features, which is used to assess the benchmark's complexity.
+This section also includes testing of classifiers and saving their predictions for further analysis.
+
